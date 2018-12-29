@@ -1,7 +1,7 @@
 buildscript {
     ext {
         springBootVersion = '2.0.6.RELEASE'
-        springCloudVersion = 'Finchley.SR2'
+        springCloudVersion = 'Finchley.RELEASE'
         lombokVersion = '1.18.2'
         avroVersion = '1.8.2'
         avroPluginVersion = '0.15.1'
@@ -13,7 +13,7 @@ buildscript {
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
-        classpath "com.commercehub.gradle.plugin:gradle-avro-plugin:${avroPluginVersion}"
+//        classpath "com.commercehub.gradle.plugin:gradle-avro-plugin:${avroPluginVersion}"
     }
 }
 
@@ -23,7 +23,7 @@ plugins {
     id "io.spring.dependency-management" version "1.0.6.RELEASE"
 }
 
-apply plugin: "com.commercehub.gradle.plugin.avro"
+//apply plugin: "com.commercehub.gradle.plugin.avro"
 
 dependencyManagement {
     imports {

@@ -1,11 +1,9 @@
 {
     "namespace": "br.com.danielhatanaka.avro",
     "type": "record",
-    "name": "UserAvroDTO",
+    "name": "Ezeq",
     "fields": [
              {"name": "name", "type": "string"},
-             {"name": "teste", "type": "string"},
-             {"name": "teste2", "type": "string"},
              {"name": "lastName", "type": "string"}
          ]
 }

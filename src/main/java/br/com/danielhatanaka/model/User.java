@@ -1,7 +1,9 @@
 package br.com.danielhatanaka.model;
 
-import lombok.*;
-import org.apache.avro.reflect.Nullable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Builder
 @Data
@@ -11,9 +13,5 @@ public class User {
 
     private String name;
     private String lastName;
-    @Nullable
-    private String lastName2;
-    @Builder.Default
-    private String lastName3 = "Default LastName3";
 
 }
