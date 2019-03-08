@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: hatanaka-kafka-example
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    stream:
+      bindings:
+        streaming-kafka-example-user-created-output:
+          destination: streaming.kafka-example.user.created
+          binder: kafka
+          content-type: application/*+avro
+        streaming-kafka-example-user-created-input:
+          destination: streaming.kafka-example.user.created
+          group: ${spring.application.name}
+          binder: kafka
+          content-type: application/*+avro
+      kafka:
+        binder:
+          configuration:
+            value:
+              deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+              serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      schema:
+        avro:
+          dynamic-schema-generation-enabled: true
+  kafka:
+    bootstrap-servers: broker:9092
+    properties:
+      schema:
+        registry:
+          url: http://localhost:8081
+
+server:
+  port: 8080

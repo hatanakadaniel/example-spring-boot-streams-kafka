@@ -1,2 +1,6 @@
-rootProject.name = 'example-spring-boot-streams-kafka'
-
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'example.kafka'
